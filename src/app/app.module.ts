@@ -8,20 +8,24 @@ import { CoreModule } from './core/core.module';
 import { AppsModule } from './apps/apps.module';
 import { UiModule } from './ui/ui.module';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from './material/material.module';
-
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase, 'Complexity-App'),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
     AppsModule,
-    UiModule,
-    MaterialModule
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
