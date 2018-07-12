@@ -1,27 +1,29 @@
 # ComplexityFire
+Version: Pre-Alpha (You can't even try it yet)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+The Complexity Application is an ongoing project of a few naive, young heads. We are still working on the whole thing, so be sure to check back in a few weeks!
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#Main Goal
 
-## Code scaffolding
+The main Goal of this project is to share, visualise, structure and learn from our respective pubperspectives. This project aims to represent our Thoughts and our knowledge in new and more intuitive ways. We are positive, that we humans have actually more complex thoughts to share than just tweets or pictures, but we definitely require an application, or rather a language, which allows us to share more complex thoughts. This project aims to be that context, a framework for different applications, which allow for different pubperspectives, saved in the form of unified structured data. This data, could and should furthermore be used for the benefit of our scientific, philosophical and political endeavours. We are currently working on the foundation of such an organisation which stands for these values. 
+For more information, contact: complexityverein@gmail.com
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Main Idea
+The Complexity-App is the ideal app, which allows every user to express and share their valuues, through a syntax of different dimensions into complex but easy to visualise pubperspectives. Now, there are three words (or values), which might need clarifications:
+a) Values
+Values are basicaly the basic elements of the complexity-App. Each unique string, picture or sound counts as a value. They are the simplest elements of our thinking and they only get meaning through the combination with other values. The complexity-App saves 
 
-## Build
+b) Dimensions
+Dimensions are the connections between the values. Even though theoretically an unlimited Number of different Dimensions could coexist, the complexity Application allows only a fixed, but constantly growing and evolving amount of Dimensions. Dimensions consists of a type, a label, a list of applications, which are able to read/write these dimensions, and of course the different Values that they connect.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+c) Pubperspectives
+Finally, certain dimensions can be put together, forming a pubperspective. We believe, that a collection of individual pubperspectives would represent our inner thinkings. 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#Application-Logic
+The Application consists of different Apps, a simple UI and a Store. More to follow
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#Contributors
+The Complexity-App is an open-source project. One of the core values of this project is openness. We therefore invite all kinds of developpers, thinkers, researchers or artist to contribute to this project. If you would like to know more or if you're already convinced, that you want to contribute, please contact: complexityverein@gmail.com

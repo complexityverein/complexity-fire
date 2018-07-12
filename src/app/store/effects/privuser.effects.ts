@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Effect, Actions } from '@ngrx/effects';
-import { User } from '../models/user.model';
+import { User } from '../models/privuser.model';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
@@ -12,7 +12,7 @@ import { from, of } from 'rxjs';
 
 
 
-import * as userActions from '../actions/user.actions';
+import * as userActions from '../actions/privuser.actions';
 export type Action = userActions.All;
 
 

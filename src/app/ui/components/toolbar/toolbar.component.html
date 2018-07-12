@@ -1,3 +1,14 @@
-<p>
-  toolbar works!
-</p>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div *ngIf="user$ | async as user">
+      <button mat-button *ngIf="user.uid">
+        <i class="material-icons">account_circle</i> {{ user.displayName | uppercase}}</button>
+      <button mat-button *ngIf="!user.uid" (click)="googleLogin()" [class.is-loading]="user.loading">
+        Sign In with Google
+      </button>
+      <button mat-button *ngIf="user.uid" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -13,12 +13,12 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { PerspectiveModule } from './store/perspective/perspective.module';
 import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects'
 import { UserStoreModule } from './store/modules/user-store/user-store.module';
-import { UserEffects } from './store/effects/user.effects';
-import { PerspectiveEffects } from './store/effects/perspective.effects';
+import { UserEffects } from './store/effects/privuser.effects';
+import { PubperspectiveEffects } from './store/effects/pubperspective.effects';
+import { PubperspectiveModule } from './store/modules/pubperspective/pubperspective.module';
 
 
 @NgModule({
@@ -40,9 +40,9 @@ import { PerspectiveEffects } from './store/effects/perspective.effects';
     StoreDevtoolsModule.instrument({
       maxAge: 25 // number of states to retain
     }),
-    PerspectiveModule,
+    PubperspectiveModule,
     UserStoreModule,
-    EffectsModule.forRoot([UserEffects, PerspectiveEffects])
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

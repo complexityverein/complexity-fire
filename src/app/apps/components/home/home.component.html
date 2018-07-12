@@ -1,3 +1,27 @@
-<p>
-  home works!
-</p>
+<h1>Welcome to Public Perspectives!</h1>
+
+
+<div *ngFor="let pubperspective of pubperspectives | async">
+
+  <h3>Pubperspective ID: {{ pubperspective.id }} </h3>
+  <p>Label: {{ pubperspective.label }}</p>
+  <ul>
+    <li *ngFor="let dimension of pubperspective.seldims">
+     {{ dimension.value1 }} {{ dimension.type }} {{ dimension.value2 }} 
+    </li>
+  </ul>
+
+  <button *ngIf="pubperspective.label==='small'" (click)="updatePubperspective(pubperspective.id, 'large')">
+    Upgrade to Large
+  </button>
+
+  <button *ngIf="pubperspective.label==='large'" (click)="updatePubperspective(pubperspective.id, 'small')">
+    Downgrade to Small
+  </button>
+
+  <button (click)="deletePubperspective(pubperspective.id)">DELETE</button>
+
+</div>
+
+
+<button (click)="createPubperspective()">CREATE new Pubperspective</button>

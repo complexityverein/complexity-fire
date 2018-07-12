@@ -6,8 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Store }        from '@ngrx/store';
 import { Observable }   from 'rxjs';
 
-import { User }         from '../../../store/models/user.model';
-import * as userActions from '../../../store/actions/user.actions';
+import { User }         from '../../../store/models/privuser.model';
+import * as userActions from '../../../store/actions/privuser.actions';
 interface AppState {
   user: User;
 }
