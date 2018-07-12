@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../../../core/auth.service';
 
 
+import { Store }        from '@ngrx/store';
+import { Observable }   from 'rxjs';
+
+import { User }         from '../../../store/models/user.model';
+import * as userActions from '../../../store/actions/user.actions';
+interface AppState {
+  user: User;
+}
 
 @Component({
   selector: 'app-login',
@@ -13,26 +20,23 @@ import { AuthService } from '../../../core/auth.service';
 
 export class LoginComponent {
 
-  constructor(public auth: AuthService,
-              private router: Router) { }
+  user$: Observable<User>;
 
-  /// Social Login
+  constructor(private store: Store<AppState>) {}
 
-  async signInWithGoogle() {
-    await this.auth.googleLogin();
-    return await this.afterSignIn();
+  ngOnInit() {
+    this.user$ = this.store.select('user');
+
+    this.store.dispatch(new userActions.GetUser());
   }
 
-  /// Anonymous Sign In
-  async signInAnonymously() {
-    await this.auth.anonymousLogin();
-    return await this.afterSignIn();
+  googleLogin() {
+    this.store.dispatch(new userActions.GoogleLogin());
   }
 
-  /// Shared
-  private afterSignIn() {
-    // Do after login stuff here, such router redirects, toast messages, etc.
-    return this.router.navigate(['/']);
+  logout() {
+    this.store.dispatch(new userActions.Logout());
   }
+
 
 }

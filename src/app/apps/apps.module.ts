@@ -11,13 +11,13 @@ import { SettingsComponent } from './components/settings/settings.component';
     CommonModule
   ],
   declarations: [
-    HomeComponent,
-    RegisterComponent,
-    ProfileComponent,
-    LoginComponent,
+    HomeComponent, 
+    RegisterComponent, 
+    ProfileComponent, 
+    LoginComponent, 
     SettingsComponent
   ],
-  exports: [
+  exports: [ 
     HomeComponent,
     RegisterComponent,
     ProfileComponent,

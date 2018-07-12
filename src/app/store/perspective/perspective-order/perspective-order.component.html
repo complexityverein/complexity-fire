@@ -1,0 +1,27 @@
+<h1>Welcome to Ngrx Perspective!</h1>
+
+
+<div *ngFor="let perspective of perspectives | async">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Pizza_Napoli.jpg" width="200px">
+
+  <h3>Perspective ID: {{ perspective.id }} </h3>
+  <p>Size: {{ perspective.size }}</p>
+
+  
+  <button *ngIf="perspective.size==='small'"  
+          (click)="updatePerspective(perspective.id, 'large')">
+    Upgrade to Large
+  </button>
+
+  <button *ngIf="perspective.size==='large'"
+          (click)="updatePerspective(perspective.id, 'small')">
+    Downgrade to Small
+  </button> 
+
+  <button (click)="deletePerspective(perspective.id)">DELETE</button>
+
+</div>
+
+
+<button (click)="createPerspective()">CREATE new Perspective</button>
