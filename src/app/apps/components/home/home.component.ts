@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as actions from '../../../store/actions/pubperspective.actions';
-import * as fromPubperspective from '../../../store/reducers/pubperspective.reducer';
-import { Pubperspective } from '../../../store/models/pubperspective.model';
-import { Pubvalue } from '../../../store/models/pubvalue.model';
-import { Pubdimension } from '../../../store/models/pubdimension.model';
+import { Pubperspective } from '../../../core/models/pubperspective.model';
+import { Pubvalue } from '../../../core/models/pubvalue.model';
+import { Pubdimension } from '../../../core/models/pubdimension.model';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +13,9 @@ export class HomeComponent implements OnInit {
 
   pubperspectives: Observable<any>;
 
-  constructor(private store: Store<fromPubperspective.State>) { }
+  constructor() { }
 
   ngOnInit() {
-    this.pubperspectives = this.store.select(fromPubperspective.selectAll)
-
-    this.store.dispatch(new actions.Query()) /// <--- new part here
   }
   createPubperspective() {
     // Example: 
@@ -69,9 +63,6 @@ export class HomeComponent implements OnInit {
    // this.store.dispatch(new actions.Create(pubperspective))
   }
 
-  updatePubperspective(id, label) {
-    this.store.dispatch(new actions.Update(id, { label: label }))
-  }
 
 }
 
