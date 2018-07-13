@@ -15,9 +15,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store/reducers';
 import { EffectsModule } from '@ngrx/effects'
-import { UserStoreModule } from './store/modules/user-store/user-store.module';
-import { UserEffects } from './store/effects/privuser.effects';
-import { PubperspectiveEffects } from './store/effects/pubperspective.effects';
+import { PrivuserModule } from './store/modules/privuser/privuser.module';
 import { PubperspectiveModule } from './store/modules/pubperspective/pubperspective.module';
 
 
@@ -41,7 +39,7 @@ import { PubperspectiveModule } from './store/modules/pubperspective/pubperspect
       maxAge: 25 // number of states to retain
     }),
     PubperspectiveModule,
-    UserStoreModule,
+    PrivuserModule,
     EffectsModule.forRoot([])
   ],
   providers: [],

@@ -13,4 +13,4 @@ import { UserEffects } from '../../effects/privuser.effects';
   ],
   declarations: []
 })
-export class UserStoreModule { }
+export class PrivuserModule { }
