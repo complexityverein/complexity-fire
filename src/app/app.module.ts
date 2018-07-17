@@ -32,7 +32,6 @@ import { MaterialModule } from './modules/material.module';
     CoreModule,
     UiModule,
     NotesModule,
-    UploadsModule,
     AngularFireModule.initializeApp(environment.firebase, 'firestarter'),
     AngularFirestoreModule,
     AngularFireAuthModule,
