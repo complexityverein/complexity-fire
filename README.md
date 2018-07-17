@@ -6,7 +6,7 @@ The Complexity Application is an ongoing project of a few naive, young heads. We
 
 #Main Goal
 
-The main Goal of this project is to share, visualise, structure and learn from our respective pubperspectives. This project aims to represent our Thoughts and our knowledge in new and more intuitive ways. We are positive, that we humans have actually more complex thoughts to share than just tweets or pictures, but we definitely require an application, or rather a language, which allows us to share more complex thoughts. This project aims to be that context, a framework for different applications, which allow for different pubperspectives, saved in the form of unified structured data. This data, could and should furthermore be used for the benefit of our scientific, philosophical and political endeavours. We are currently working on the foundation of such an organisation which stands for these values. 
+The main Goal of this project is to share, visualise, structure and learn from our respective perspectives. This project aims to represent our Thoughts and our knowledge in new and more intuitive ways. We are positive, that we humans have actually more complex thoughts to share than just tweets or pictures, but we definitely require an application, or rather a language, which allows us to share more complex thoughts. This project aims to be that context, a framework for different applications, which allow for different pubperspectives, saved in the form of unified structured data. This data, could and should furthermore be used for the benefit of our scientific, philosophical and political endeavours. We are currently working on the foundation of such an organisation which stands for these values. 
 For more information, contact: complexityverein@gmail.com
 
 #Main Idea
@@ -17,12 +17,12 @@ Values are basicaly the basic elements of the complexity-App. Each unique string
 b) Dimensions
 Dimensions are the connections between the values. Even though theoretically an unlimited Number of different Dimensions could coexist, the complexity Application allows only a fixed, but constantly growing and evolving amount of Dimensions. Dimensions consists of a type, a label, a list of applications, which are able to read/write these dimensions, and of course the different Values that they connect.
 
-c) Pubperspectives
-Finally, certain dimensions can be put together, forming a pubperspective. We believe, that a collection of individual pubperspectives would represent our inner thinkings. 
+c) Perspectives
+Finally, certain dimensions can be put together, forming a perspective. We believe, that a collection of individual perspectives would represent our inner thinkings. 
 
 
 #Application-Logic
-The Application consists of different Apps, a simple UI and a Store. More to follow
+The Application consists of different Apps, a simple UI and a Store. More to follow..
 
 
 #Contributors

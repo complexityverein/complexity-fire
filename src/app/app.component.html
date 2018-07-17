@@ -1,3 +1,23 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-toolbar></app-toolbar>
+<div id="wrapper" class="content">
+    <main-nav></main-nav>
+
+    <div class="columns">
+        <aside class="column is-2 is-offset-1">
+            <user-profile></user-profile>
+        </aside>
+
+        <main class="column is-8">
+            <notification-message></notification-message>
+
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+
+    <footer class="footer">
+Something down here
+    </footer>
+
+
+   
+</div>>

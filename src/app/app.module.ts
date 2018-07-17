@@ -1,38 +1,47 @@
-import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  BrowserModule,
+  BrowserTransferStateModule
+} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppsModule } from './apps/apps.module';
-import { UiModule } from './ui/ui.module';
-import { RouterModule } from '@angular/router';
-import { AngularFireModule } from 'angularfire2';
+import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+
+// Firestarter App Modules
 import { CoreModule } from './core/core.module';
+import { UploadsModule } from './uploads/uploads.module';
+import { UiModule } from './ui/ui.module';
+import { NotesModule } from './apps/module/notes.module';
 
+// AngularFire2 Modules
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireFunctionsModule } from 'angularfire2/functions';
+import { MaterialModule } from './modules/material.module';
 
+// IMPORTANT
+// Add your own project credentials to environments/*.ts
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase, 'Complexity-App'),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    BrowserAnimationsModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserTransferStateModule,
     AppRoutingModule,
-    AppsModule,
+    CoreModule,
     UiModule,
-    CoreModule
+    NotesModule,
+    UploadsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'firestarter'),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireFunctionsModule,
+    MaterialModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

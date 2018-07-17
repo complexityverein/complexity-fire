@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { auth } from 'firebase';
 import { firebase } from '@firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {
@@ -11,13 +11,9 @@ import { NotifyService } from './notify.service';
 
 import { Observable, of } from 'rxjs';
 import { switchMap, startWith, tap, filter } from 'rxjs/operators';
+import { User } from './models/user.model';
 
-interface User {
-  uid: string;
-  email?: string | null;
-  photoURL?: string;
-  displayName?: string;
-}
+
 
 @Injectable()
 export class AuthService {
@@ -45,22 +41,7 @@ export class AuthService {
   ////// OAuth Methods /////
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  githubLogin() {
-    const provider = new firebase.auth.GithubAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  facebookLogin() {
-    const provider = new firebase.auth.FacebookAuthProvider();
-    return this.oAuthLogin(provider);
-  }
-
-  twitterLogin() {
-    const provider = new firebase.auth.TwitterAuthProvider();
+    const provider = new auth.GoogleAuthProvider();
     return this.oAuthLogin(provider);
   }
 
@@ -80,7 +61,7 @@ export class AuthService {
     return this.afAuth.auth
       .signInAnonymously()
       .then(credential => {
-        this.notify.update('Welcome to Firestarter!!!', 'success');
+        this.notify.update('Welcome to the Complexity-App!!!', 'success');
         return this.updateUserData(credential.user); // if using firestore
       })
       .catch(error => {
@@ -112,7 +93,7 @@ export class AuthService {
 
   // Sends email allowing user to reset password
   resetPassword(email: string) {
-    const fbAuth = firebase.auth();
+    const fbAuth = auth();
 
     return fbAuth
       .sendPasswordResetEmail(email)
