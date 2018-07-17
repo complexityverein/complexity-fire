@@ -37,26 +37,26 @@ constructor(private authService: AuthService, private afs: AngularFirestore) {
   public iUser = new BehaviorSubject<IUser>(guest);
   iUserObs = this.iUser.asObservable();
   // ALL PRIVATE USER ACTIONS
-  public iActions = new BehaviorSubject<IActions[]>([]);
-  iActionsObs = this.iActions.asObservable();
-  // MY PERSPECTIVES
-  public iPerspectives = new BehaviorSubject<IPerspective[]>([]);
-  iPerspectivesObs = this.iPerspectives.asObservable();
-  // MY DIMENSIONS
-  public iDimensions = new BehaviorSubject<IDimension[]>([]);
-  iDimensionsObs = this.iDimensions.asObservable();
-  // MY VALUES
-  public iValues = new BehaviorSubject<IValue[]>([]);
-  iValuesObs = this.iValues.asObservable();
+  // public iActions = new BehaviorSubject<IActions[]>([]);
+  // iActionsObs = this.iActions.asObservable();
+  // // MY PERSPECTIVES
+  // public iPerspectives = new BehaviorSubject<IPerspective[]>([]);
+  // iPerspectivesObs = this.iPerspectives.asObservable();
+  // // MY DIMENSIONS
+  // public iDimensions = new BehaviorSubject<IDimension[]>([]);
+  // iDimensionsObs = this.iDimensions.asObservable();
+  // // MY VALUES
+  // public iValues = new BehaviorSubject<IValue[]>([]);
+  // iValuesObs = this.iValues.asObservable();
 
 
   //PUBLIC DATA
   // ALL PUBLIC USERS
-  public pUsers = new BehaviorSubject<PUser[]>([]);
-  pUsersObs = this.pUsers.asObservable();
+  // public pUsers = new BehaviorSubject<PUser[]>([]);
+  // pUsersObs = this.pUsers.asObservable();
   // ALL PUBLIC USER ACTIONS
-  public pActions = new BehaviorSubject<PActions[]>([]);
-  pActionsObs = this.pActions.asObservable();
+  // public pActions = new BehaviorSubject<PActions[]>([]);
+  // pActionsObs = this.pActions.asObservable();
   // ALL PUBLIC PERSPECTIVES
   public pPerspectives = new BehaviorSubject<PPerspective[]>([]);
   pPerspectivesObs = this.pPerspectives.asObservable();
