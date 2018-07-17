@@ -14,30 +14,31 @@ import { DataService } from '../../../core/data.service';
 export class NotesListComponent implements OnInit {
 
   pperspectives;
-  content: string;
+
 
   constructor(private actionService: ActionsService, private dataService: DataService) { }
 
   ngOnInit() {
-    this.pperspectives = this.dataService.pPerspectives.subscribe(data => this.pperspectives = data)
+   // this.actionService.getPPers();
+   // this.pperspectives = this.dataService.pPerspectives.subscribe(data => this.pperspectives = data)
   }
 
-  clickHandler() {
-    const newValue: PValue = {
-      val: this.content
-    }
-    const noteValue: PValue = {
-      val: 'note'
-    }
-    this.actionsSe
+  // clickHandler() {
+  //   const newValue: PValue = {
+  //     val: this.content
+  //   }
+  //   const noteValue: PValue = {
+  //     val: 'note'
+  //   }
+  //   this.actionsSe
 
-    const newDimension: PDimension = {
-      value1: ,
-      type:'isPartOf',
-      value2: 
-    }
-    this.notesService.createNote(this.content);
-    this.content = '';
-  }
+  //   const newDimension: PDimension = {
+  //     value1: ,
+  //     type:'isPartOf',
+  //     value2: 
+  //   }
+  //   this.notesService.createNote(this.content);
+  //   this.content = '';
+  // }
 
 }
