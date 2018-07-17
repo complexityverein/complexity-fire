@@ -10,14 +10,12 @@ import { environment } from '../environments/environment';
 
 // Firestarter App Modules
 import { CoreModule } from './core/core.module';
-import { UploadsModule } from './uploads/uploads.module';
 import { UiModule } from './ui/ui.module';
 import { NotesModule } from './apps/module/notes.module';
 
 // AngularFire2 Modules
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireFunctionsModule } from 'angularfire2/functions';
 import { MaterialModule } from './modules/material.module';
@@ -38,7 +36,6 @@ import { MaterialModule } from './modules/material.module';
     AngularFireModule.initializeApp(environment.firebase, 'firestarter'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule,
     AngularFireFunctionsModule,
     MaterialModule
   ],

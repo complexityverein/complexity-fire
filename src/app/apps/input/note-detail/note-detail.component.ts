@@ -8,18 +8,11 @@ import { NotesService } from '../../service/notes.service';
   styleUrls: ['./note-detail.component.scss'],
 })
 export class NoteDetailComponent {
-
-  @Input() note: any;
+  content: string;
 
   constructor(private notesService: NotesService) { }
 
-  addHeartToNote(val: number) {
-    if (this.note.id) {
-      this.notesService.updateNote(this.note.id, { hearts: val + 1 });
-    } else {
-      console.error('Note missing ID!');
-    }
-  }
+ 
 
   deleteNote(id: string) {
     this.notesService.deleteNote(id);
